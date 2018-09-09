@@ -24,7 +24,7 @@ export class TradeGenerator
 
     setInterval(() => {
       var elapsedTime = MicrosecondsTimer.now() - this.start;
-      console.log(chalk.red("TradeGenerator: " + this.numTrades + " generated in " + MicrosecondsTimer.since(this.start)));
+      console.log(chalk.red("TradeGenerator: " + this.numTrades + " generated in " + MicrosecondsTimer.since(this.start) + " microsecs."));
     }, 15000);
   }
 
