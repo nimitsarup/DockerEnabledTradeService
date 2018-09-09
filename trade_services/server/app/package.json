@@ -1,0 +1,23 @@
+{
+  "name": "zeromq-server",
+  "version": "1.0.0",
+  "description": "Zmq server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/crypto-js": "^3.1.43",
+    "@types/zmq": "0.0.22",
+    "chalk": "^2.4.1",
+    "crypto-js": "^3.1.9-1",
+    "microseconds": "^0.1.0",
+    "moleculer": "^0.13.2",
+    "moleculer-db": "^0.7.5",
+    "moleculer-repl": "^0.5.2",
+    "nanotimer": "^0.3.15",
+    "zmq": "^2.15.3"
+  }
+}
