@@ -23,7 +23,7 @@ export class TradeRecoder
         this.numTrades = 0;
 
         setInterval(() => {
-            console.log(chalk.green("TradeRecoder: " + this.numTrades + " trades serviced. MinDuration: " + this.minDuration + ", MaxDuration: " + this.maxDuration + " (microseconds)."));
+            console.log(chalk.green("TradeRecoder: " + this.numTrades + " trades serviced. MinDuration: " + this.minDuration + ", MaxDuration: " + this.maxDuration + " (μs)."));
           }, 15000);
     }
 
