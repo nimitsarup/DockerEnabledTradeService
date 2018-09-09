@@ -29,22 +29,20 @@ export class TradeRecoder
 
     StartService()
     {
-        this.zmqSocket.on(`message`, function(msg: string) {
-            
+        this.zmqSocket.on(`message`, (msg) => {
             var parts = msg.toString().split('-');
             this.numTrades++;
             //console.log(parts);
             // save to in-memory lokidb
             this.db_table.insert({ID: parts[0], HASH: parts[1]});
-
+    
             var timeTaken = MicrosecondsTimer.now() - Number(parts[0]);
             if (this.minDuration == undefined) this.minDuration = timeTaken;
             if (this.maxDuration == undefined) this.maxDuration = timeTaken;
-
+    
             if(timeTaken < this.minDuration) this.minDuration = timeTaken;
             if(timeTaken > this.maxDuration ) this.maxDuration = timeTaken;
-
-        }.bind(this));
+        });
     }
 }
 
